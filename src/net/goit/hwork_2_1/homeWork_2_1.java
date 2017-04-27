@@ -3,52 +3,62 @@ package net.goit.hwork_2_1;
 import java.util.Scanner;
 
 /**
- * Created by asus on 24.04.17.
+ * Main class describing home work
+ * @author Mamedov Vyacheslav
+ * @version 1.0
  */
 public class homeWork_2_1 {
 
     public static void main(String[] args) {
-
-        Scanner pressButton = new Scanner(System.in);
-        String pressbutton = pressButton.next();
-
-
-//        arrayHolderDemo startProg = new arrayHolderDemo();
-//
-//        Scanner pressButton = new Scanner(System.in);
-//        String pressbutton = pressButton.next();
-//        switch (pressbutton) {
-//            case "1":{
-//                System.out.println("Hello in my programms!");
-//                System.out.println("Enter nomber menu: ");
-//                System.out.println("1. Create Array");
-//                System.out.println("2. Out Array");
-//                }
-//            case "2":break;
-//            startProg.runningProgramm((byte) 0);
-            // iMas.outMass(myArr);
-//        System.out.println();
-//        iMas.sortMassIncrease(myArr);
-//        System.out.println();
-//        iMas.sortMassDecrease(myArr);
-            // iMas.foundNomber(myArr,"myVolume");
-            //System.out.println("intex "+iMas.foundNomber(myArr,"myVolume"));
+        boolean controlExit  = false;
+        arrayHolderDemo startProg = new arrayHolderDemo();
+        while (controlExit!=true){
+            startProg.mainMenu();
+            Scanner pressButton = new Scanner(System.in);
+            String pressbutton = pressButton.next();
+            switch (Integer.parseInt(pressbutton)){
+            case   1: {
+                startProg.runningProgramm((byte) 1);
+                controlExit = false;
+                break;
+            }
+            case 2: {
+                startProg.runningProgramm((byte) 2);
+                controlExit = false;
+                break;
+            }
+            case 3: {
+                 startProg.runningProgramm((byte) 3);
+                 controlExit = false;
+                 break;
+                }
+            case 4: {
+                startProg.runningProgramm((byte) 4);
+                controlExit = false;
+                break;
+                }
+            case 5: {
+                startProg.runningProgramm((byte) 5);
+                controlExit = false;
+                break;
+                }
+            case 6: {
+                startProg.runningProgramm((byte) 6);
+                controlExit = false;
+                break;
+                }
+            case 7: {
+                startProg.runningProgramm((byte) 7);
+                controlExit = false;
+                break;
+                }
+            case 8: {
+                controlExit = true;
+                break;
+                }
+            }
         }
 
-    public abstract class MenuEntry {
-        private String title;
-
-        public MenuEntry(String title) {
-            this.title = title;
-        }
-
-        public abstract void run();
     }
-//    }
-
-
-    //public static int arrHolder(int count){
-
-
 }
 

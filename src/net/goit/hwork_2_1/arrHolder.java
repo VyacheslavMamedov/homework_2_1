@@ -88,7 +88,7 @@ public class arrHolder {
         System.out.println("Отсортированный масив");
 
         for (int i = 0; i < imas2.length; i++) {
-            System.err.print(imas2[i] + " ");
+            System.out.print(imas2[i] + " ");
         }
     }
     public void sortMassDecrease(int imas[]){
@@ -119,7 +119,7 @@ public class arrHolder {
         System.out.println("Отсортированный масив");
 
         for (int i = 0; i < imas2.length; i++) {
-            System.err.print(imas2[i] + " ");
+            System.out.print(imas2[i] + " ");
         }
 
     }
