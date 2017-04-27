@@ -3,7 +3,9 @@ package net.goit.hwork_2_1;
 import java.util.Scanner;
 
 /**
- * Created by asus on 24.04.17.
+ * class describing methods Array
+ * @author Mamedov Vyacheslav
+ * @version 1.0
  */
 public class arrHolder {
 
@@ -88,7 +90,6 @@ public class arrHolder {
         for (int i = 0; i < imas2.length; i++) {
             System.err.print(imas2[i] + " ");
         }
-
     }
     public void sortMassDecrease(int imas[]){
 
@@ -123,7 +124,7 @@ public class arrHolder {
 
     }
 
-    public int foundNomber (int[] imas, String whyNomber){
+    public int foundNomber (int[] imas, String whyNomber) {
         int maxIndex = 0;
         if (whyNomber == "max") {
 
@@ -132,14 +133,24 @@ public class arrHolder {
                     maxIndex = i;
                 }
             }
-            System.out.println(imas[maxIndex]);
+            } else if (whyNomber == "min") {
+            for (int i = 0; i > imas.length; i++) {
+                if (imas[maxIndex] < imas[i]) {
+                    maxIndex = i;
+                }
+            }
+        } else if (whyNomber=="myVolume") {
+            System.out.print("Enter volume: ");
 
-        }else if (whyNomber=="min"){
-
-        }else {
-
+            maxIndex = -1;
+            Scanner myVolume = new Scanner(System.in);
+            String myvolume = myVolume.next();
+            for (int i = 0; i < imas.length; i++) {
+                if (imas[i] == Integer.parseInt(myvolume)) {
+                    maxIndex = i;
+                }
+            }
         }
-
-        return maxIndex;
+         return maxIndex;
     }
 }
