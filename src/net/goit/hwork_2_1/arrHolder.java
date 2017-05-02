@@ -14,7 +14,7 @@ public class arrHolder {
     private int[] imas = new int[count];
 
 
-    public void iMasCreate(int imas[]) {
+    public int iMasCreate(int imas[]) {
         System.out.println("Выберите метод заполнения массива: ");
         System.out.println();
         System.out.print("1 - автоматически, или 2 - вручную : ");
@@ -47,10 +47,10 @@ public class arrHolder {
                 break;
 
         }
-
+        return 0;
      }
 
-    public void outMass(int imas[]) {
+    public int outMass(int imas[]) {
         System.out.println();
         System.out.println("Ваш массив");
 
@@ -58,9 +58,10 @@ public class arrHolder {
             System.out.print(imas[i] + " ");
         }
         System.out.println();
+        return 0;
     }
 
-    public void sortMassIncrease(int imas[]) {
+    public int sortMassIncrease(int imas[]) {
 
         int[] imas2 = new int[imas.length];
 
@@ -90,8 +91,9 @@ public class arrHolder {
         for (int i = 0; i < imas2.length; i++) {
             System.out.print(imas2[i] + " ");
         }
+        return 0;
     }
-    public void sortMassDecrease(int imas[]){
+    public int sortMassDecrease(int imas[]){
 
         int[] imas2 = new int[imas.length];
 
@@ -121,7 +123,7 @@ public class arrHolder {
         for (int i = 0; i < imas2.length; i++) {
             System.out.print(imas2[i] + " ");
         }
-
+return 0;
     }
 
     public int foundNomber (int[] imas, String whyNomber) {

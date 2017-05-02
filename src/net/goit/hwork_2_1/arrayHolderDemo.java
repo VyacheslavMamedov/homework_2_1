@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class arrayHolderDemo {
     private  int[] myArr;
-    public void runningProgramm(byte keyVolume){
+    public int runningProgramm(byte keyVolume){
         arrHolder iMas = new arrHolder();
 
         if (keyVolume == 1){
@@ -41,9 +41,10 @@ public class arrayHolderDemo {
                 System.err.println("Index your value: " + index);
             } else System.err.println("Not found your value in array");
         }
+        return 0;
     }
 
-    public void mainMenu(){
+    public String mainMenu(){
        System.out.println("");
        System.out.println("Menu:");
        System.out.println("Enter nomber menu: ");
@@ -55,6 +56,7 @@ public class arrayHolderDemo {
        System.out.println("6. Fount min value in array");
        System.out.println("7. Fount your value in array");
        System.out.println("8. Exit");
+        return null;
     }
 
 }
