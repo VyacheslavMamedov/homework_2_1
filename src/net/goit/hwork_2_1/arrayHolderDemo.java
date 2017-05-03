@@ -15,9 +15,16 @@ public class arrayHolderDemo {
         if (keyVolume == 1){
             System.out.print("Enter count elements your Array: ");
             Scanner col = new Scanner(System.in);
-            String Col = col.next();
-            myArr = new int[Integer.parseInt(Col)];
-            iMas.iMasCreate(myArr);
+            int Col = 0;
+            if (col.hasNextInt()) {
+                Col = col.nextInt();
+                myArr = new int[Col];
+                iMas.iMasCreate(myArr);
+            } else {
+                System.out.println();
+                System.err.println("You not enter digital!!! Please enter digital.");
+                runningProgramm((byte) 1);
+            }
 
         }
         if (keyVolume == 2){
