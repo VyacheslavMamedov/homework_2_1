@@ -16,16 +16,11 @@ public class arrayHolderDemo {
             System.out.print("Enter count elements your Array: ");
             Scanner col = new Scanner(System.in);
             int Col = 0;
-            if (col.hasNextInt()) {
-                Col = col.nextInt();
+
+            Col = iMas.testResultScanner(col,"You not enter digital count!!!");
+
                 myArr = new int[Col];
                 iMas.iMasCreate(myArr);
-            } else {
-                System.out.println();
-                System.err.println("You not enter digital!!! Please enter digital.");
-                runningProgramm((byte) 1);
-            }
-
         }
         if (keyVolume == 2){
             iMas.outMass(myArr);
@@ -51,19 +46,18 @@ public class arrayHolderDemo {
         return 0;
     }
 
-    public String mainMenu(){
+    public void mainMenu(){
        System.out.println("");
-       System.out.println("Menu:");
-       System.out.println("Enter nomber menu: ");
-       System.out.println("1. Create Array");
-       System.out.println("2. Out Array");
-       System.out.println("3. Sort Array Increase");
-       System.out.println("4. Sort Array Decrease");
-       System.out.println("5. Fount max value in array");
-       System.out.println("6. Fount min value in array");
-       System.out.println("7. Fount your value in array");
-       System.out.println("8. Exit");
-        return null;
+       System.out.println("Menu:\n" +
+               "Enter nomber menu: \n" +
+               "1. Create Array\n" +
+               "2. Out Array\n" +
+               "3. Sort Array Increase\n"+
+               "4. Sort Array Decrease\n" +
+               "5. Fount max value in array\n" +
+               "6. Fount min value in array\n" +
+               "7. Fount your value in array\n" +
+               "8. Exit");
     }
 
 }

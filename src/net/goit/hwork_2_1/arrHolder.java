@@ -39,13 +39,8 @@ public class arrHolder {
                     System.out.print("Ведите " + i + " элемен массива: ");
                     Scanner mas = new Scanner(System.in);
                     int Mas=0;
-                    if (mas.hasNextInt()) {
-                         Mas = mas.nextInt();
-                        imas[i] = Mas;
-                    } else {
-                        System.out.println("You not enter digital count!!!");
-                        i--;
-                    }
+                    Mas = testResultScanner(mas,"You not enter digital count!!!");
+                    imas[i] = Mas;
                 }
                 break;
             }
@@ -153,9 +148,8 @@ return 0;
             maxIndex = -1;
             int myvolume =0;
             Scanner myVolume = new Scanner(System.in);
-            if (myVolume.hasNextInt()) {
-                myvolume = myVolume.nextInt();
-            } else System.out.println("You not enter digital count!!!");
+            myvolume = testResultScanner(myVolume,"You not enter digital count!!!");
+
             for (int i = 0; i < imas.length; i++) {
                 if (imas[i] == myvolume) {
                     maxIndex = i;
@@ -163,5 +157,16 @@ return 0;
             }
         }
          return maxIndex;
+    }
+
+
+    public int testResultScanner(Scanner keyboadr, String errMessage)
+    {
+        while (!keyboadr.hasNextInt())
+        {
+            System.err.println(errMessage);
+            keyboadr.next();
+        }
+        return keyboadr.nextInt();
     }
 }
